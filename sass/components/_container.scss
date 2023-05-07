@@ -98,12 +98,17 @@
 
 .list_of_tasks li {
 	display: flex;
-	align-items: center;
 	margin: 10px 0 0 0;
+	width: 313px;
+	justify-content: space-between;
+	align-items: center;
+	border: 1px dashed rgb(106 162 45);
+	padding: 7px;
+	flex-direction: row-reverse;
 }
 
 .list_of_tasks li label {
-	margin: 0 20px 0 0;
+	margin: 0 0 0 0;
 }
 .list_of_tasks li button {
 	margin-left: auto;
