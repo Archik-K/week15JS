@@ -1,4 +1,4 @@
-const input = document.querySelector(".task_input_field"); // получаем элемент
+const input = document.querySelector(".task_input_field"); // получаем элемент ввода задачи
 const button = document.querySelector(".button_to_add_a_task"); // получаем кнопку добавления задачи
 const taskList = document.querySelector(".list_of_tasks"); // получаем элемент списка задач
 const clearButton = document.querySelector(".button_to_clear_the_task_list"); // получаем кнопку очистки списка задач
@@ -7,9 +7,9 @@ let tasks = []; // создаем пустой массив для хранен�
 
 // функция для добавления задачи в список
 function addTask() {
-	const task = input.value; // получаем значение из input
+	const task = input.value; // Получаем значение из поля ввода задачи и сохраняем его в переменной "task"
 	tasks.push(task); // добавляем задачу в массив
-	input.value = ""; // очищаем input
+	input.value = ""; // Очищаем поле ввода задачи
 	updateTaskList(); // обновляем список задач
 }
 
@@ -44,22 +44,13 @@ function updateTaskList() {
 	}
 }
 
-// функция для пометки задачи выполненной или не выполненной
-function toggleTask(taskItem) {
-	if (taskItem.classList.contains("done")) {
-		taskItem.classList.remove("done");
-	} else {
-		taskItem.classList.add("done");
-	}
-}
-
 // обработчик клика на кнопку добавления задачи
 button.addEventListener("click", addTask);
 
 // обработчик клика на кнопку очистки списка задач
 clearButton.addEventListener("click", () => {
-	tasks = [];
-	updateTaskList();
+	tasks = []; // Очищаем массив задач
+	updateTaskList(); // Обновляем список задач
 });
 
 // инициализация списка задач при загрузке страницы
